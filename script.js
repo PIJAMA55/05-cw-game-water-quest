@@ -43,6 +43,20 @@ function startGame() {
   gameActive = true;
   createGrid(); // Set up the game grid
   spawnInterval = setInterval(spawnWaterCan, 1000); // Spawn water cans every second
+
+let timeLeft = 30;
+let timerDisplay = document.getElementById("timer");
+
+let countdown = setInterval(function() {
+    timeLeft--;
+    timerDisplay.innerHTML = timeLeft;
+
+    if (timeLeft <= 0) {
+        clearInterval(countdown);
+        timerDisplay.innerHTML = "Time's up!";
+        gameActive = false;
+    }
+}, 1000); // runs every 1000 ms = 1 second
 }
 
 function endGame() {
@@ -52,3 +66,12 @@ function endGame() {
 
 // Set up click handler for the start button
 document.getElementById('start-game').addEventListener('click', startGame);
+
+document.querySelector('.game-grid').addEventListener('click', function(e) {
+  if (e.target.classList.contains('water-can')) {
+    currentCans++;
+    document.getElementById("current-cans").innerHTML = currentCans;
+  }
+});
+
+
