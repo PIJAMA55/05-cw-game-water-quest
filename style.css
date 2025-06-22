@@ -141,3 +141,55 @@ button {
   margin: 30px auto 0;
   transition: background-color 0.2s;
 }
+
+#logo{
+  width: 20vw;
+  height: auto;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #222;
+  margin: auto;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: #FFC907;
+  font-size: 1.4rem;
+  max-width: 400px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+.close-modal {
+  margin-top: 24px;
+  background-color: #2E9DF7;
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.close-modal:hover {
+  background-color: #159A48;
+}
